@@ -1,0 +1,19 @@
+<Layouts.app flash={@flash}>
+  <.header>
+    Micropost {@micropost.id}
+    <:subtitle>This is a micropost record from your database.</:subtitle>
+    <:actions>
+      <.button navigate={~p"/microposts"}>
+        <.icon name="hero-arrow-left" />
+      </.button>
+      <.button variant="primary" navigate={~p"/microposts/#{@micropost}/edit?return_to=show"}>
+        <.icon name="hero-pencil-square" /> Edit micropost
+      </.button>
+    </:actions>
+  </.header>
+
+  <.list>
+    <:item title="Content">{@micropost.content}</:item>
+    <:item title="User">{@micropost.user_id}</:item>
+  </.list>
+</Layouts.app>

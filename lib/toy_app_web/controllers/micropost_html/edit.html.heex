@@ -1,0 +1,8 @@
+<Layouts.app flash={@flash}>
+  <.header>
+    Edit Micropost {@micropost.id}
+    <:subtitle>Use this form to manage micropost records in your database.</:subtitle>
+  </.header>
+
+  <.micropost_form changeset={@changeset} action={~p"/microposts/#{@micropost}"} return_to={~p"/microposts"} />
+</Layouts.app>
