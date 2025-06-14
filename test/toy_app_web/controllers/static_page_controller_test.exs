@@ -5,7 +5,7 @@ defmodule ToyAppWeb.StaticPageControllerTest do
     conn = get(conn, ~p"/static_pages/home")
 
     html_response(conn, 200)
-    |> assert_select("title", "Home | Phoenix Tutorial Sample App")
+    |> assert_select("title", "Phoenix Tutorial Sample App")
   end
 
   test "should get help", %{conn: conn} do
@@ -31,7 +31,6 @@ defmodule ToyAppWeb.StaticPageControllerTest do
 
   test "should get about", %{conn: conn} do
     conn = get(conn, ~p"/static_pages/about")
-
     assert conn.status == 200
   end
 end

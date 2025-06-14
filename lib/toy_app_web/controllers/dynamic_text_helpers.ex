@@ -13,8 +13,9 @@ defmodule ToyAppWeb.DynamicTextHelpers do
     [title, " | ", @base_title]
   end
 
-  defp get_page_title(%{action: :home}),
-    do: "Home"
+  defp put_base_title(title) do
+    [title, " | ", @base_title]
+  end
 
   defp get_page_title(%{action: :help}),
     do: "Help"
