@@ -20,12 +20,14 @@ defmodule ToyAppWeb.Router do
     get "/", StaticPageController, :home, as: :root
 
     resources "/users", UserController
+    get "/signup", UserController, :new, as: :signup
+
     resources "/microposts", MicropostController
 
-    get "/static_pages/home", StaticPageController, :home
-    get "/static_pages/help", StaticPageController, :help
-    get "/static_pages/about", StaticPageController, :about
-    get "/static_pages/contact", StaticPageController, :contact
+    get "/home", StaticPageController, :home
+    get "/help", StaticPageController, :help, as: :help
+    get "/about", StaticPageController, :about, as: :about
+    get "/contact", StaticPageController, :contact, as: :contact
   end
 
   # Other scopes may use custom stacks.
